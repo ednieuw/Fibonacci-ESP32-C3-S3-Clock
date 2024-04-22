@@ -66,8 +66,14 @@ At the top of the INO-file one has to define what is installed.
 In the example above the ESP32S3_ZERO with WS2812 LEDS are used.
 A few line lower the pin definitions for the attached LDR and LED-strip are defined.
 
-The working of the code is explained here: https://github.com/ednieuw/ESP32-C3-Clock-and-more
-Building the Fibonacci clock here: https://github.com/ednieuw/Fibonacci-Vierkantekokerklok
-The case can also be 3d-printed. See here:  https://www.thingiverse.com/thing:6483258
-And here: https://ednieuw.home.xs4all.nl/Woordklok/FibonacciClock/FibonacciClock.html
+- The working of the code is explained here: https://github.com/ednieuw/ESP32-C3-Clock-and-more
+- Building the Fibonacci clock here: https://github.com/ednieuw/Fibonacci-Vierkantekokerklok
+- The case can also be 3d-printed. See here:  https://www.thingiverse.com/thing:6483258
+- And here: https://ednieuw.home.xs4all.nl/Woordklok/FibonacciClock/FibonacciClock.html
 
+Connect the parts as below for the ESP32-C3-supermini
+![ESP32C3SuperMini-FibonacciClock-V03](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/afda037b-d755-4bfd-b77c-a0076784dd04) 
+
+Connect the parts as below for the Waveshare ESP32-S3-Zero. 
+Keep in mind that the pin layout can be different for other ESP32-S3-Zero's. 
+![ESP32S3-Welded-Zero-FibonacciClock-V02](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/bd49306a-7c72-49d1-a5b9-c9870e786b95)
