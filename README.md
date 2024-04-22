@@ -1,2 +1,5 @@
-# Fibonacci-ESP32-Nano-Wordclock
-Fibonacci clock with an Arduino ESP32 Nano
+# Fibonacci-ESP32-C3 or S3 Clock
+Fibonacci clock with an ESP32 C3 or S3
+
+
+
