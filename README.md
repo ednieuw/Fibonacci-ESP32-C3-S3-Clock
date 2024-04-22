@@ -145,56 +145,18 @@ Check in the menu (third row from the bottom) if WIFI and NTP are on.
 Enter @ to restart the MCU. It will restart and connections will be made. 
 Sometimes a second or third reset must be given to get the clock connected to WIFI. If connection still fails check the SSID name and the entered password. (send the letter b, an easter egg))
 If WIFI is connected the LED on the MCU will turn on a green dot.	
-```
-___________________________________
-A SSID B Password C BLE beacon name
-D Date (D15012021) T Time (T132145)
-E Timezone  (E<-02>2 or E<+01>-1)
-  Make own colour of:  (Hex RRGGBB)
-F Font  G Dimmed font H Bkgnd
-I To print this Info menu
-K LDR reads/sec toggle On/Off
-L L0 = NL, L1 = UK, L2 = DE
-  L3 = FR, L4 = Wheel
-N Display off between Nhhhh (N2208)
-O Display toggle On/Off
-P Status LED toggle On/Off
-Q Display colour choice      (Q0-7)
-  Q0 Yellow  Q1 hourly
-  Q2 White   Q3 All Own
-  Q4 Own     Q5 Wheel
-  Q6 Digital Q7 Analog display
-R Reset settings @ = Reset MCU
---Light intensity settings (1-250)--
-S=Slope V=Min  U=Max   (S80 V5 U200)
-W=WIFI  X=NTP& Y=BLE  Z=Fast BLE
-Ed Nieuwenhuys Aug 2023
-___________________________________
-Display off between: 00h - 00h
-Display choice: Yellow
-Slope: 80     Min: 5     Max: 255 
-SSID: FRITZ!BoxEd
-BLE name: PaarseS3N8R2
-IP-address: 192.168.178.106 (/update)
-Timezone:CET-1CEST,M3.5.0,M10.5.0/3
-WIFI=On NTP=On BLE=On FastBLE=Off
-Language choice: Rotate language
-Software: ESP32C3S3_WordClockV025.ino
-02/09/2023 21:06:27 
-___________________________________
-```
+`
  	Menu displayed in serial output.
 
 To set a time zone. Send the time zone string between the quotes prefixed with the character E or e.
 See the entry strings for the time zones at the bottom of this page.
 For example; if you live in Australia/Sydney send the string, eAEST-10AEDT,M10.1.0,M4.1.0/3
 
-
-![image](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/8daaab6c-dc05-4f5d-90a4-b1587850bb27) 
+![MenuWebpage](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/e73d9e20-f8b0-4c25-b4e6-d9b4f81bb65e)
 HTML page on iPhone 	
 
-![image](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/83b67d80-39b5-448c-a5af-fd27c681005d)
-Termite Terminal from a PC
+![Menu-iPhone](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/edad0443-be74-4dee-b2a2-8f5a400ef070)
+iPhone BLE serial terminal
 
 # Upgrading software
 Software can be upgraded over the air. (OTA) by opening a web browser and entering the IP-address of the clock followed with /update. 
