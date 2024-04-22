@@ -294,6 +294,7 @@ D Set Date  and T Set Time
 If you are not connected to WIFI you have to set time and date by hand.
 For example enter: D06112022 to set the date to 6 November 2022.
 Enter for example T132145 (or 132145 , or t132145)  to set the time to 45 seconds and 21 minute past one o'clock.
+
 E Set Timezone E<-02>2 or E<+01>-1
 At the bottom of this page you can find the time zones used in 2022. 
 It is a rather complicated string and it is therefore wise to copy it.
@@ -302,45 +303,40 @@ Copy the string between the " "'s and send it with starting with an 'E' or 'e' i
 E<+00>0<+02>-2,M3.5.0/1,M10.5.0/3.
 Time zones and daylight savings should be ended and replaced by one universal date and time for the while planet cq universe. But that is my opinion.
 Make own colour of: (Hex RRGGBB)
-F Font G Dimmed font H Bkgnd
-You can set the colours of the highlighted and dimmed characters and the background. .
-The format to be entered is hexadecimal. 0123456789ABCDEF are the characters that can be used. The command is 2 digits for Red followed with  two for Green and ending with two digits for Blue. 
-To colour the characters intense red enter FF0000 prefixed with the letter F.
-To set the background to intense blue enter: H0000FF
-To set the dimmed character to dark grey enter for example: G191919. 
-You get grey if red, green and blue has the same intensity.
+
 I To print this Info menu
 Print the menu to Bluetooth and the serial monitor connected with an USB-cable.
+
 K Reads/sec toggle On/Off
 Entering a K toggles printing of the LDR reading of the measured light intensity. 
 It also shows how many times the processor loops through the program and checks its tasks to run the clock. 
 
-L L0 = NL, L1 = UK, L2 = DE, L3 = FR, L4 = Wheel
-You can choose between four languages to display or show them randomly every minute.
-
 N Display off between Nhhhh (N2208)
 With N2208 the display will be turned off between 22:00 and 8:00.
 
-O Display toggle On/Off
 O toggle the display off and on.
-P Status LEDs toggle On/Off
+
 P toggle the status LEDs on the MCU off and on.
 
-Q Display colour choice (Q0-6)
-Q0 Yellow Q1 hourly Q2 White Q3 All Own Q4 Own Q5 Wheel Q6 Digital display
+Q Display colour choice (Q0-9)
+Q0 = Mondriaan1
+Q1 = Mondriaan2
+Q2 = RGB
+Q3 = Greens
+Q4 = Pastel
+Q5 = Modern
+Q6 = Cold
+Q7 = Warm
+Q8 = Earth
+Q9 = Mondriaan3
 
-Q0 will show the time with yellow words.
-Q1 will show every hour another colour.
-Q2 shows all the texts white.
-Q3 and Q4 uses you own defined colours.
-Q5 will follow rainbow colours every minute.
-Q6 is the digital display with the IP-address and date until seconds are 00.
-Q7 is the analogue clock
 R Reset settings 
 R will set all preferences to default settings, it also clears the SSID and password.
+
 --Light intensity settings (1-250)--
 S=Slope V=Min  U=Max   (S80 V5 U200)
-The
+See chapter: Regulating the light intensity of the display
+
 @ = Reset MCU
 @ will restart the MCU. This is handy when the SSID, et cetera are changed and the program must be restarted. Settings will not be deleted.
  
