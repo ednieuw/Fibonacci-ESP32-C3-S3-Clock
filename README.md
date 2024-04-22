@@ -13,9 +13,13 @@ Settings can be controlled with a webpage, a PC or a Bluetooth Low Energy (BLE) 
 
 This clock is built with a ESP32-C3-supermini and an ESP32-S3-zero with Espressif BLE nRF52 and WIFI. 
 It is possible to use any ESP32 as long as the used pins are adapted in the program.  
+![S3_C3_MCU](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/3b6b667f-b216-47f9-908e-f0fc4708580d)
+
 Soldering pins to the ESP32-C3-supermini was difficult. Even with Pb/Sn solder at 250 Celsius often the board was not function anymore because SMD’s came loose from the PCB or were destroyed. I ordered low melting solder paste 
 I used the ESP32-S3-zero with welded pins. 
 Also the use of the internal LED must be adapted to the board that is used or turn off. Some boards use RGB LEDs connected to three pins and other board use a WS2812 RGB LED.  
+
+
 ![IMG_7943](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/984d59dd-759a-4b8a-9a5d-9a50959e1591)
 
 # Before starting
