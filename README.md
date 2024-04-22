@@ -31,6 +31,7 @@ BLESerial nRF	BLE Serial Pro	Serial Bluetooth Terminal
 
 # Compiling the program
 
+```
 //========================================================================================
 //#define ESP32C3_SUPERMINI
 #define ESP32S3_ZERO
@@ -60,7 +61,7 @@ const int NUM_LEDS = 14;     // How many leds in fibonacci clock?
 #define  LED_PIN      1       // D5 Pin to control colour SK6812/WS2812 LEDs
 #define  secondsPin   3       // If LED is connected to Pin IO3 with 470 ohm resistor
                          #endif // ESP32S3_ZERO
-
+```
 At the top of the INO-file one has to define what is installed. 
 In the example above the ESP32S3_ZERO with WS2812 LEDS are used.
 A few line lower the pin definitions for the attached LDR and LED-strip are defined.
