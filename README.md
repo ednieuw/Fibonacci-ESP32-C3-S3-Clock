@@ -80,7 +80,7 @@ Connect the parts as below for the ESP32-C3-supermini
 
 Connect the parts as below for the Waveshare ESP32-S3-Zero. 
 Keep in mind that the pin layout can be different for other ESP32-S3-Zero's. 
-![ESP32S3-Welded-Zero-FibonacciClock-V02](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/bd49306a-7c72-49d1-a5b9-c9870e786b95)
+![image](https://github.com/user-attachments/assets/40112b8f-f3c1-4168-9648-04b539ee6afb)
 
 # Using OTA
 An easy method is to install the Fibonacci clock program for the first time Over The Air (OTA)
