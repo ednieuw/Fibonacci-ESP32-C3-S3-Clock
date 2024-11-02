@@ -70,6 +70,22 @@ At the top of the INO-file one has to define what is installed.
 In the example above the ESP32S3_ZERO with WS2812 LEDS are used.
 A few line lower the pin definitions for the attached LDR and LED-strip are defined.
 
+To use the USB CDC, you need to configure your device in the Tools menu:
+1) Enter into Download Mode manually (This is needed when the compiled app does not upload)
+   To enter into the download mode, you need to press and hold BOOT button and press and release the RESET button.
+2) Configure the USB CDC
+  For ESP32-S2    USB CDC On Boot -> Enabled
+                  Upload Mode -> Internal USB
+  For ESP32-C3    USB CDC On Boot -> Enabled
+  For ESP32-S3    USB CDC On Boot -> Enabled
+                  Upload Mode -> UART0 / Hardware CDC
+3)Flash and Monitor
+  You can now upload your sketch to the device. After flashing for the first time, you need to manually reset the device.
+  This procedure enables the flashing and monitoring through the internal USB and does not requires you to manually enter into the download mode or to do the manual reset after flashing.
+  To monitor the device, you need to select the USB port and open the Monitor tool selecting the correct baud rate (usually 115200) according to the Serial.begin() defined in your code.
+
+4) Perform a reset with option R in the menu of the program after the first upload to be sure everything is set to their default settings
+
 - The working of the code is explained here: https://github.com/ednieuw/ESP32-C3-Clock-and-more
 - Building the Fibonacci clock here: https://github.com/ednieuw/Fibonacci-Vierkantekokerklok
 - The case can also be 3d-printed. See here:  https://www.thingiverse.com/thing:6483258
