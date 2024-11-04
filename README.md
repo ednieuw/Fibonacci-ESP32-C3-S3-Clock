@@ -2,11 +2,10 @@
 Fibonacci clock with an ESP32 C3 or S3
 
 ![PrototypeS3](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/cade51cf-ec1c-4248-b3cf-6d65ba484731)
-Prototype
+<br>Prototype
 
-A clock that displays time in colours.  
+A clock that displays time in colours according a [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_sequence).  
 ![IMG_6128](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/e79ee14f-d8e0-469f-83f9-d1d13a5135cf)
-
 
 Time is synchronized with the Network Time Protocol (NTP) from the internet. 
 Settings can be controlled with a webpage, a PC or a Bluetooth Low Energy (BLE) serial terminal app installed on a phone, PC or tablet.
@@ -68,57 +67,60 @@ const int NUM_LEDS = 14;     // How many leds in fibonacci clock?
 ```
 At the top of the INO-file one has to define what is installed. 
 In the example above the ESP32S3_ZERO with WS2812 LEDS are used.
-A few line lower the pin definitions for the attached LDR and LED-strip are defined.
+A few line below the pin definitions for the attached LDR and LED-strip are defined.
 
 To use the USB CDC, you need to configure your device in the Tools menu:
-1) Enter into Download Mode manually (This is needed when the compiled app does not upload)
-   To enter into the download mode, you need to press and hold BOOT button and press and release the RESET button.
+1) Enter into Download Mode manually (This is needed when the compiled app does not upload). To enter into the download mode, you need to press and hold BOOT button and press and release the RESET button.
 2) Configure the USB CDC
   For ESP32-S2    USB CDC On Boot -> Enabled
                   Upload Mode -> Internal USB
   For ESP32-C3    USB CDC On Boot -> Enabled
   For ESP32-S3    USB CDC On Boot -> Enabled
                   Upload Mode -> UART0 / Hardware CDC
+   Select Partition Scheme: Minimal SPIFFS (1.9 MB app)
 3)Flash and Monitor
   You can now upload your sketch to the device. After flashing for the first time, you need to manually reset the device.
   This procedure enables the flashing and monitoring through the internal USB and does not requires you to manually enter into the download mode or to do the manual reset after flashing.
   To monitor the device, you need to select the USB port and open the Monitor tool selecting the correct baud rate (usually 115200) according to the Serial.begin() defined in your code.
 
-4) Perform a reset with option R in the menu of the program after the first upload to be sure everything is set to their default settings
+4) Perform a reset with option R in the menu of the program after the first upload to be sure everything is set to their default settings.
 
 - The working of the code is explained here: https://github.com/ednieuw/ESP32-C3-Clock-and-more
 - Building the Fibonacci clock here: https://github.com/ednieuw/Fibonacci-Vierkantekokerklok
 - The case can also be 3d-printed. See here:  https://www.thingiverse.com/thing:6483258
 - And here: https://ednieuw.home.xs4all.nl/Woordklok/FibonacciClock/FibonacciClock.html
 
-Connect the parts as below for the ESP32-C3-supermini
+Connect the parts as below for the ESP32-C3-supermini.
 ![ESP32C3SuperMini-FibonacciClock-V03](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/afda037b-d755-4bfd-b77c-a0076784dd04) 
+or (I had a problem with one Supermini on GPIO0. You can also use GPIO 10 or 21. Change the pin number is the program for the LDR!)
+![Fibo-C3-Mini-LDR-on-GPIO20](https://github.com/user-attachments/assets/67168f36-6e1a-4d60-8bc1-41120d27a53e)
 
 Connect the parts as below for the Waveshare ESP32-S3-Zero. 
 Keep in mind that the pin layout can be different for other ESP32-S3-Zero's. 
 ![image](https://github.com/user-attachments/assets/40112b8f-f3c1-4168-9648-04b539ee6afb)
 
 # Using OTA
-An easy method is to install the Fibonacci clock program for the first time Over The Air (OTA)
+An easy method is to install the Fibonacci clock program for the first time Over The Air (OTA).
 In my program I use the ElegantOTA library but I found out recently that the OTA from Arduino also is also fine to use.
+
+Compile and upload the Arduino OTA.ino file from the examples in the Arduino IDE.
 
 Open in Examples in the Arduino IDE: ArduinoOTA 
 Enter your WIFI credentials in the program at line 8 and 9
-Compile and upload to the ESP32
-Find out in your router what IP address it has received.
+Select the proper board in the IDE.
+Compile and upload to the ESP32. 
+Open the serial monitor in the IDE to see the IP address
+Or find out in your router what IP address it has received.
 Type in a  browser the IP-address. Something like http://192.168.178.156/ in my case.
 Login with ‘’admin’’ and ‘’admin’’
-Load the “ESP32-C3S3-FiboV006.ino.esp32s3.bin” file. (or a higher V006) 
+Load the “ESP32-C3S3-FiboV010.ino.esp32s3.bin” file. (or a higher V010) 
 And hops, the app is running.
 Enter your WIFI credentials with BLE op your mobile phone in the menu of the clock, Reset and the clock is running.
-
-
- 
-
+Or open the ip-addres in your router (in my case: http://192.168.178.156/) and enter the credential wit optie A and B from the menu.(See below for a detailed description)
 
 #  Installations  
 
-To connect to a WIFI network a SSID (WIFI name)  and password must be entered.
+To connect to a WIFI network a SSID (WIFI name) and password must be entered.
 There are a few methods:
 Connect the MCU in the clock with a micro USB serial cable to a PC and use a serial terminal.  
 Use a BLE serial terminal app on a phone or tablet for connection.
