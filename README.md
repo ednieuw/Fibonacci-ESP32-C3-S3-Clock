@@ -1,5 +1,5 @@
 # Fibonacci-ESP32-C3 or S3 Clock
-Fibonacci clock with an ESP32 C3 or S3
+Fibonacci clock with an ESP32 C3-supermini or S3-Zero
 
 More Fibonacci clocks:[here on Arduino Nano ](https://github.com/ednieuw/Fibonacci-Vierkantekokerklok)<br>
 and [here on Arduino Nano ESP32](https://github.com/ednieuw/Fibonacci-Nano-ESP32-clock).
@@ -13,13 +13,20 @@ A clock that displays time in colours according a [Fibonacci sequence](https://e
 Time is synchronized with the Network Time Protocol (NTP) from the internet. 
 Settings can be controlled with a webpage, a PC or a Bluetooth Low Energy (BLE) serial terminal app installed on a phone, PC or tablet.
 
-This clock is built with a ESP32-C3-supermini and an ESP32-S3-zero with Espressif BLE nRF52 and WIFI. 
+This clock is built with the very cheap ESP32-C3-supermini or ESP32-S3-zero with Espressif BLE nRF52 and WIFI. 
 It is possible to use any ESP32 as long as the used pins are adapted in the program.  
 ![S3_C3_MCU](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/3b6b667f-b216-47f9-908e-f0fc4708580d)
 
-Soldering pins to the ESP32-C3-supermini was difficult. Even with Pb/Sn solder at 250 Celsius often the board was not functioning anymore because SMD’s came loose from the PCB or were destroyed. Some survived and were used for some clocks
-As an alternative I used the ESP32-S3-zero with welded pins. The same software can be used with both models. Only the coding for the on bboard LED is different.
+Soldering pins to the ESP32-C3-supermini was difficult. Even with Pb/Sn solder at 250 Celsius often the board was not functioning anymore because SMD’s came loose from the PCB or were destroyed. Some survived and were used for some clocks. 
+
+As an alternative I used the ESP32-S3-zero with welded pins. 
+
+The same software can be used with both models. Only the coding for the on board LED is different.
+
 In the end I opted to use the (Arduino Nano ESP32](https://github.com/ednieuw/Fibonacci-Nano-ESP32-clock). 
+
+But is you have some of these cheap boards lying around they are fine to use.
+With a 470 ohm resitor, a capacitor between 200 and 1000 uF and 12 -14 WS2812 or SK6812 RGB(W) LEDs the clock can be made.
 
 The choice of the #define at the top of the sketch will take care of the right code to upload to the C3-supermini or S3-Zero.
 
