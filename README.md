@@ -17,11 +17,13 @@ This clock is built with a ESP32-C3-supermini and an ESP32-S3-zero with Espressi
 It is possible to use any ESP32 as long as the used pins are adapted in the program.  
 ![S3_C3_MCU](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/3b6b667f-b216-47f9-908e-f0fc4708580d)
 
-Soldering pins to the ESP32-C3-supermini was difficult. Even with Pb/Sn solder at 250 Celsius often the board was not function anymore because SMD’s came loose from the PCB or were destroyed. Some survived and were used for some clocks
+Soldering pins to the ESP32-C3-supermini was difficult. Even with Pb/Sn solder at 250 Celsius often the board was not functioning anymore because SMD’s came loose from the PCB or were destroyed. Some survived and were used for some clocks
 As an alternative I used the ESP32-S3-zero with welded pins. The same software can be used with both models. Only the coding for the on bboard LED is different.
-The choice of the #define at the top of the sketch will take care of the right code to upload.
+In the end I opted to use the (Arduino Nano ESP32](https://github.com/ednieuw/Fibonacci-Nano-ESP32-clock). 
 
-The software support SK6812 and WS2812 LED-strips.
+The choice of the #define at the top of the sketch will take care of the right code to upload to the C3-supermini or S3-Zero.
+
+The software supports SK6812 and WS2812 LED-strips.
 
 ![IMG_7943](https://github.com/ednieuw/Fibonacci-ESP32-C3-S3-Clock/assets/12166816/984d59dd-759a-4b8a-9a5d-9a50959e1591)
 
