@@ -85,12 +85,17 @@ A few line below the pin definitions for the attached LDR and LED-strip are defi
 To use the USB CDC, you need to configure your device in the Tools menu:
 1) Enter into Download Mode manually (This is needed when the compiled app does not upload). To enter into the download mode, you need to press and hold BOOT button and press and release the RESET button.
 2) Configure the USB CDC
+   
   For ESP32-S2    USB CDC On Boot -> Enabled
                   Upload Mode -> Internal USB
+   
   For ESP32-C3    USB CDC On Boot -> Enabled
+  
   For ESP32-S3    USB CDC On Boot -> Enabled
                   Upload Mode -> UART0 / Hardware CDC
+                  
    Select Partition Scheme: Minimal SPIFFS (1.9 MB app)
+   
 3)Flash and Monitor
   You can now upload your sketch to the device. After flashing for the first time, you need to manually reset the device.
   This procedure enables the flashing and monitoring through the internal USB and does not requires you to manually enter into the download mode or to do the manual reset after flashing.
